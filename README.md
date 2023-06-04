@@ -65,7 +65,7 @@ pip3 install opencv-python
 Run the script to start streaming video from the Raspberry Pi camera. Replace `<Remote IP>` and `<Port>` with the IP address and port number of your Ubuntu PC:
 
 ```bash
-python3 record_video.py --ip <Remote IP> --port <Port> --size 1280x720
+python3 send.py --ip <Remote IP> --port <Port> --size 1280x720
 ```
 
 This will start recording video from the Raspberry Pi's camera and send it as a UDP stream to the specified IP address and port. The video size is set to 1280x720 by default but can be adjusted using the `--size` flag.
@@ -77,7 +77,7 @@ Press any key to stop the recording.
 Run the script to start receiving the video stream. Replace `<Your IP>` and `<Port>` with the IP address and port number that you've previously specified:
 
 ```bash
-python3 stream_video.py --ip <Your IP> --port <Port>
+python3 read.py --ip <Your IP> --port <Port>
 ```
 
 This will start displaying the video stream received from the Raspberry Pi. If the connection is interrupted or no frames are received, the program will retry every second.
